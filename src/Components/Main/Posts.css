@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "Bold Gothic";
+    src: url(./GOTHICB.TTF);
+}
+.ContainerPosts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    flex-wrap: wrap;
+
+}
+
+
+.ContainerPost{
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #FBB03B;
+    width: 240px;
+    height: 300px;
+    box-shadow: 2px 2px 0.4rem black;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px 50px;
+}
+.ContainerPost div{
+    width: 240px;
+    height: 150px;
+    overflow: hidden;
+}
+.ContainerPost img{
+    height: 180px;
+    transition: 600ms;
+}
+.ContainerPost:hover img{transform: scale(1.2);}
+
+.ContainerPost span{
+    color: #4F6643;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 20px 0 0 20px;
+    border-top: solid 1px #4F6643;
+    border-bottom: solid 1px #4F6643;
+    border-left: solid 1px #4F6643;
+    position: absolute;
+    margin-top: 135px;
+}
+
+
+.ContainerPost figcaption{
+    font-family: "Bold Gothic";
+    font-size: 1.4rem;
+    margin: 10px;
+    margin-top: 25px;
+}
+@media (max-width:940px) {
+    .ContainerPost{margin: 40px 10px;}
+    
+}

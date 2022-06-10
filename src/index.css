@@ -1,0 +1,10 @@
+@font-face {
+  font-family: Century;
+  src: url(./Components/Fonts/GOTHIC.TTF);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Century;
+}

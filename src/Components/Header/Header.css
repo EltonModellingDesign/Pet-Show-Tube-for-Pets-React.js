@@ -1,0 +1,118 @@
+@font-face {
+    font-family: Century Bold;
+    src: url(./GOTHICB.TTF);
+}
+
+header{
+    height: 120px;
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    align-items:center;
+    z-index: 100;
+}
+.Login{
+    justify-self: end;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+
+.Menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 100;
+}
+
+.MenuList{
+    display: flex;   
+    margin-bottom: 15px;
+
+    
+}
+li{
+    list-style: none;
+    align-self: end;
+    margin: 0px 20px;
+    font-size: 1.4rem;
+
+}
+.MenuList li:nth-child(2)::before{
+    content: "";
+    height: 1px;
+    padding: 5px;
+    border-radius: 50%;
+    border: solid 2px #233F14;
+    position: absolute;
+    margin: 8px -25px;
+}
+.MenuList li:nth-child(3)::before{
+    content: "";
+    height: 1px;
+    padding: 5px;
+    border-radius: 50%;
+    border: solid 2px #233F14;
+    position: absolute;
+    margin: 8px -25px;
+}
+.checkbox{
+    display: block;
+}
+
+li a{
+    text-decoration: none;
+    color: #233F14;
+    font-family: Century Bold;    
+    white-space:nowrap;
+}
+li a:hover{
+    color: #8C6239;
+}
+
+figure{
+    justify-self: center;
+
+}
+
+.Logo{height: 100px;}
+.ToggleContainer{display: none;}
+.ToggleMenu{display: none;}
+
+
+@media (max-width:940px) {
+    .ToggleContainer{display: flex;justify-content: flex-end;}
+    .Toggle{
+        margin: 30px 20px;
+        fill: #233F14;
+        height: 50px;
+        cursor: pointer;
+    }
+    .Toggle:active{fill: #8C6239;}
+
+    .checkbox:checked ~ .ToggleMenu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 100px;
+        margin-right: 20px;
+        padding: 10px 0;
+        align-items: center;
+        z-index: 1;
+        background-color: white;
+        border: solid 1px #233F14;}
+    .LogginToggle{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        font-size: 1.3rem;}  
+
+    header{grid-template-rows: 1fr;align-items: center;}
+
+    .Login{display: none;}
+    .MenuList{display: none;}
+    .LogoContainer{align-self: center;}
+    .Logo{height: 60px;}
+    .checkbox{display: none;}
+
+      
+}
